@@ -1,0 +1,19 @@
+WALLET_ADDRESS: TNfQqz5yzXgBD1vCeJcaoWFZMbHaP4yD1P  # TRC20 wallet address
+
+
+ENV:
+  OPENAI_API_KEY: string
+  PROMPT: string
+  DORMINT_PIPE_ID: string
+
+
+CONTEXT:
+
+
+
+INPUTS:
+  text: string
+
+
+OUTPUTS:
+  text: string
