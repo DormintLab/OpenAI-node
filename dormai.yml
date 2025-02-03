@@ -7,8 +7,7 @@ ENV:
   DORMINT_PIPE_ID: string
 
 
-CONTEXT:
-
+CONTEXT: {}
 
 
 INPUTS:
