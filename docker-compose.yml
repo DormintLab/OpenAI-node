@@ -3,8 +3,6 @@ services:
     build:
       context: .
     command: ["python3", "main.py" ]
-    ports:
-      - "8351:8351"
     restart: always
     networks:
       - dormintlab_openai_node
