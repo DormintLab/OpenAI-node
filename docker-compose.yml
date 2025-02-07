@@ -23,6 +23,6 @@ services:
       - "/etc/shadowsocks-libev/myvpn.json:/etc/shadowsocks-libev/myvpn.json"
 
 networks:
-  most:
+  dormintlab_openai_node:
     external: false
     name: dormintlab_openai_node
