@@ -18,6 +18,8 @@ async def main():
                   file=sys.stderr)
             client = get_async_openai_client(dormai.settings["OPENAI_API_KEY"])
             output_text = await get_async_openai_text_api(client, prompt, text)
+            print("Sending: ", output_text, context,
+                  file=sys.stderr)
             await dormai.send_event(dormai.OutputData(text=output_text),
                                     context)
 
