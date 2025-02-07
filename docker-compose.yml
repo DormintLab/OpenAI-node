@@ -1,0 +1,29 @@
+services:
+  backend:
+    build:
+      context: .
+    command: ["python3", "main.py" ]
+    ports:
+      - "8351:8351"
+    restart: always
+    networks:
+      - dormintlab_openai_node
+    depends_on:
+      - proxy
+
+  proxy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: [ "ss-local", "-c", "/etc/shadowsocks-libev/myvpn.json" ]
+    restart: always
+    networks:
+      - dormintlab_openai_node
+    volumes:
+      - "/etc/shadowsocks-libev/myvpn.json:/etc/shadowsocks-libev/myvpn.json"
+
+
+networks:
+  most:
+    external: true
+    name: dormintlab_openai_node
