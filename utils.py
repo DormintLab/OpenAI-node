@@ -2,7 +2,7 @@ import httpx
 
 
 def get_http_proxy():
-    proxy = "socks5://proxy:8388"
+    proxy = "socks5://openai-proxy:8388"
     return proxy
 
 
