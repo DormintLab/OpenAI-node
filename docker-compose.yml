@@ -9,7 +9,7 @@ services:
     networks:
       - dormintlab_openai_node
     depends_on:
-      - proxy
+      - openai-proxy
 
   openai-proxy:
     build:
