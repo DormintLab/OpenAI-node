@@ -1,5 +1,5 @@
 services:
-  backend:
+  openai-node:
     build:
       context: .
     command: ["python3", "main.py" ]
@@ -11,7 +11,7 @@ services:
     depends_on:
       - proxy
 
-  proxy:
+  openai-proxy:
     build:
       context: .
       dockerfile: Dockerfile
@@ -22,8 +22,7 @@ services:
     volumes:
       - "/etc/shadowsocks-libev/myvpn.json:/etc/shadowsocks-libev/myvpn.json"
 
-
 networks:
   most:
-    external: true
+    external: false
     name: dormintlab_openai_node
